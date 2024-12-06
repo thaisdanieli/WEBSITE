@@ -1,0 +1,166 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plac</title>
+
+
+    <style>
+
+        @font-face {
+            font-family: 'Gotham';
+            src: url('SAC/static/Fonts/GothamBook.ttf') format('woff2');
+            font-weight: normal;
+            font-style: normal; 
+        }
+
+        @font-face {
+            font-family: 'Gotham';
+            src: url('SAC/static/Fonts/GothamBold.ttf') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gotham';
+            src: url('SAC/static/Fonts/Gotham-Black') format('woff2');
+            font-weight: 900;
+            font-size: normal;
+        }        
+
+        :root {
+            --color-primary: #269fe6;
+            --color-primary-hover: #2086c2;
+            --color-primary-dark: #13141f;
+            --color-primary-dark-hover: #212336;
+            --color-primary-light: #d4ecfa;
+            --color-primary-light-hover: #bdd8e7;
+            --color-white: #fff;
+            --color-black: #000;
+            --color-dark-text: #444;
+            --color-info-light: #cce5ff;
+            --color-debug-light: #cce5ff;
+            --color-success-light: #d4edda;
+            --color-alert-light: #fff3cd;
+            --color-warning-light: #fff3cd;
+            --color-error-light: #f8d7da;
+            --color-info-dark: #4d86c4;
+            --color-debug-dark: #4d86c4;
+            --color-success-dark: #4a9c5d;
+            --color-alert-dark: #927f40;
+            --color-warning-dark: #927f40;
+            --color-error-dark: #da525d;
+            --color-gray-0: #f9f9f9;
+            --color-gray-1: #e0e0e0;
+            --color-gray-2: #c7c7c7;
+            --color-gray-3: #aeaeae;
+            --color-gray-4: #959595;
+            --color-gray-5: #7d7d7d;
+            --color-gray-6: #646464;
+            --color-gray-7: #4b4b4b;
+            --color-gray-8: #323232;
+            --color-gray-9: #191919;
+        
+        
+            --font-primary: sans-serif;
+            /* Fonte principal */
+            --font-headings: 'Roboto Slab', serif;
+            /* Fonte para títulos */
+            --spacing-gutter-medium: 3rem;
+            /* Espaçamento médio */
+            --spacing-gutter-large: 4rem;
+        }
+
+        /* Estilo base: remove margens, paddings e define box-sizing */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Define o tamanho da fonte base no HTML para facilitar cálculos rem */
+        html {
+            font-size: 62.5%;
+        }
+
+        /* Define o estilo padrão do corpo da página */
+        body {
+            font-size: 1.6rem;
+            font-family: var(--color-primary);
+            background: white;
+        }
+                
+        /* Fundo do cabeçalho principal */
+        .main-header-container {
+            background: red;
+            padding: 1rem;
+        }
+
+        .container-center .center {
+            display: flex;
+            justify-content: space-between;
+            max-width: 160rem; /*1170p*/
+            margin:0 auto;
+            width: 100%;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0 auto;
+            gap: 4rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-family: 'Gotham', sans-serif;
+        }
+
+        nav a:hover {
+            color: red;
+            background: white;
+            padding: 0.5rem 1rem;   /* Adiciona espaço ao redor do texto, para que o fundo fique maior que a palavra.
+                                    padding: 0.5rem 1rem significa 0.5rem no topo e na base, e 1rem nas laterais. */
+            border-radius: 50px;    /* Deixa o fundo arredondado */
+            transition: 0.3s;       /* Animação suave */
+        }
+
+        .footer {
+            font-size: 1rem;
+            font-family: 'Gotham', sans-serif;
+        }
+
+        .main-content-container {
+            
+            width: 100%;
+            z-index: 0;
+            position: absolute;
+            padding: 0 0 0 0;
+        }
+
+        .main-content {
+            display: flex;
+        }
+
+        .main-content-container .title {
+            font-family: 'Gotham', sans-serif;
+            font-weight: black;
+            font-size: 8rem;
+        }
+
+        .main-content .picture {
+            position: fixed;
+            padding: 60px 0 0 20px;
+            right: 30rem;
+        }
+
+        .main-content .text {
+            margin-right: 200px;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>

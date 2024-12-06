@@ -1,0 +1,46 @@
+:root {
+    --color-vermelho-1: #ff0000;
+    --color-primary-dark: #13141f;
+
+    --font-primary: sans-serif;
+    /* Fonte principal */
+    --font-headings: 'Roboto Slab', serif;
+    /* Fonte para títulos */
+    --spacing-gutter-medium: 3rem;
+    /* Espaçamento médio */
+    --spacing-gutter-large: 4rem;
+}
+
+/* Estilo base: remove margens, paddings e define box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define o tamanho da fonte base no HTML para facilitar cálculos rem */
+html {
+    font-size: 62.5%;
+}
+
+/* Define o estilo padrão do corpo da página */
+body {
+    font-size: 1.6rem;
+    font-family: var(--color-primary);
+    background: white;
+}
+
+.container {
+    max-width: 144rem;
+    /* Largura máxima */
+    margin:0 auto;
+    /* Centraliza o container */
+    padding: var(--spacing-gutter-medium);
+    /* Espaçamento interno */
+}
+
+/* Fundo do cabeçalho principal */
+.main-header-container {
+    background: red;
+    display: flex;
+}
