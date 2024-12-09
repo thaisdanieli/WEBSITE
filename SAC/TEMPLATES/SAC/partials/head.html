@@ -18,26 +18,30 @@
         integrity="sha512-bdqdas3Yr82pkTg5i0X1gcAT3tBXz/8H3J1ec7RyEKAvr/YiSCJNV2dnkukmL8CicjKb9rxmd+ILK8Kg2o2wvQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" 
+        integrity="sha512-7rXIvd/xj1FnI2zKQjjXzDFxC4twqBByp8yxOgEQJs4C/aNzNyoQsOO7VxH0RgYNhbAYLJLwzqslaP50KTTHIQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <style>
 
         @font-face {
             font-family: 'Gotham';
-            src: url('SAC/static/Fonts/GothamBook.ttf') format('woff2');
+            src: url('./static/Fonts/GothamBook.ttf') format('truetype');
             font-weight: 400; /* Regular */
             font-style: normal; 
         }
 
         @font-face {
             font-family: 'Gotham';
-            src: url('SAC/static/Fonts/GothamBold.ttf') format('woff2');
+            src: url('./static/Fonts/GothamBold.ttf') format('truetype');
             font-weight: 700;  /* Bold */
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Gotham';
-            src: url('SAC/static/Fonts/Gotham-Black') format('woff2');
+            src: url('./static/Fonts/Gotham-Black.otf') format('truetype');
             font-weight: 900; /* Black */
             font-size: normal;
         }        
@@ -119,33 +123,28 @@
             align-items: center;
         }
 
-        nav ul {
+        .container-center .menu {
             display: flex;
             list-style-type: none;
             margin: 0 auto;
             gap: 4rem;
         }
 
-        nav ul li a {
+        .menu-container a {
             color: white;
             text-decoration: none;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-family: 'Gotham', sans-serif;
-        }
-
-        nav a:hover {
-            color: red;
-            background: white;
+            font-weight: 700;
             padding: 0.5rem 1rem;   /* Adiciona espaço ao redor do texto, para que o fundo fique maior que a palavra.
                                     padding: 0.5rem 1rem significa 0.5rem no topo e na base, e 1rem nas laterais. */
             border-radius: 50px;    /* Deixa o fundo arredondado */
             transition: 0.3s;       /* Animação suave */
         }
 
-        .footer {
-            font-size: 1rem;
-            font-family: 'Gotham', sans-serif;
-            font-weight: 400;
+        nav a:hover {
+            color: red;
+            background: white;
         }
 
         .main-content-container {
@@ -169,7 +168,6 @@
         .main-content-text {
             max-width: 64rem;
             margin-left: 0 auto;
-            /*padding: 0 0 0 2rem;*/
         }
         .main-content-text .title-h2 {
             font-family: 'Gotham', sans-serif;
@@ -217,12 +215,39 @@
         .main-footer {
             background: var(--color-gray-1);
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--spacing-gutter-medium);
+            /*Container flexível: Isso ativa o Flexbox, que é um sistema de layout para organizar os elementos filhos do container.*/
+            padding: 2rem;
+            /*Adiciona um espaçamento interno (padding) de 2rem em todos os lados do elemento.*/
+            justify-content: center;
+            /*Alinha os elementos filhos horizontalmente no centro do container.*/
+            flex-flow: column nowrap;
+            /*flex-direction: column; significa que os itens filhos serão dispostos em uma coluna vertical.
+              flex-wrap: nowrap; impede que os itens "quebrem" para uma nova linha, forçando-os a permanecer na mesma coluna.*/
         }
 
-        .h3-location {
+        .footer-address {
+            font-size: 14px;
+            font-family: 'Gotham', sans-serif;
+            font-weight: 400;
+            color: var(--color-gray-6);
+            font-style: normal;
+        }
+
+        .footer-section {
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            width: 100%;
+            /*Define a largura do container como 100% do elemento pai.*/
+            max-width: 1170px;
+            /*Define uma largura máxima de 1170px para o container.
+            Mesmo que o elemento pai seja maior, o container não ultrapassará 1170px de largura.*/
+            margin: 0 auto;
+            /*Isso centraliza o container horizontalmente dentro de seu elemento pai, 
+            desde que uma largura (ou max-width) esteja definida.*/
+        }
+
+        .footer-section .location{
             font-size: 2rem;
             font-family: 'Gotham', sans-serif;
             font-weight: 700;
@@ -230,22 +255,27 @@
             color: var(--color-gray-8);
         }
 
-        .fa-solid {
+        .footer-section i {
             font-size: 2rem;
             color: var(--color-gray-8);
         }
 
-        .footer-description {
-            padding: 1rem;
-            font-size: 17px;
+        .footer-information {
+            padding: 5px;
+            color: var(--color-gray-7);
+            font-size: 12px;
             font-family: 'Gotham', sans-serif;
             font-weight: 400;
+            text-decoration: none;
+        }
+
+        .footer-section h2{
+            font-size: 15px;
+            font-family: 'Gotham', sans-serif;
+            font-weight: 700;
             color: var(--color-gray-7);
         }
 
-        .h3-footer {
-            
-        }
 
     </style>
 
