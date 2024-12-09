@@ -152,65 +152,85 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            height: 80vh;
         }
 
         .main-content {
+            max-width: 1400px;
+            width: 100%;
             display: flex;
-            padding: 0 20px 0 40px;
-        }
-
-        .main-content .picture {
-            padding: 10px 0 0 10px;
-
+            flex-direction: row; /* Organiza os elementos em linha (horizontalmente) */
+            align-items: flex-start; /* Alinha os elementos ao topo */
+            justify-content: space-between;  /*Adiciona espaçamento entre texto e imagem */
         }
 
         .main-content-text {
-            max-width: 64rem;
-            margin-left: 0 auto;
+            max-width: 64rem; /* Define uma largura máxima para o elemento. Isso limita o tamanho do conteúdo mesmo em telas maiores. */
+            margin-left: 0 auto; /* Centraliza o elemento horizontalmente, já que `auto` nas margens funciona em conjunto com largura fixa ou máxima. */
         }
+        
+
         .main-content-text .title-h2 {
-            font-family: 'Gotham', sans-serif;
-            color: #001369;
-            font-weight: 700;
-            font-size: 7rem;
+            font-family: 'Gotham', sans-serif; /* Define a fonte primária como 'Gotham'. Caso não esteja disponível, usa 'sans-serif' como reserva. */
+            color: #001369; /* Define a cor do texto em um tom de azul escuro. */
+            font-weight: 700; /* Define o peso da fonte como negrito (700 é equivalente a "bold"). */
+            font-size: 6rem; /* Define o tamanho da fonte em 6 rem (relativo ao tamanho da raiz). */
         }
+        
 
         .main-content-text .title-h1 {
-            font-family: 'Gotham', sans-serif;
-            color:red;
-            font-size: 11rem;
-            font-weight: 900;
-            padding: 0.5px;
+            font-family: 'Gotham', sans-serif; /* Aplica a mesma configuração de fonte usada no título anterior. */
+            color: red; /* Define a cor do texto como vermelho. */
+            font-size: 11rem; /* Define o tamanho da fonte como 11 rem, o que a torna bem maior que `title-h2`. */
+            font-weight: 900; /* Usa um peso de fonte ainda maior, tornando o texto extra negrito. */
+            padding: 0.5px; /* Adiciona um espaçamento interno mínimo ao redor do texto (0.5px é muito pequeno). */
         }
+        
 
-        .main-content-text .plac-description {
-            padding: 1rem 0 2rem 0;
+        .plac-description p {
+            padding: 1rem 0 4rem 0; /* Adiciona espaçamento interno:
+                                      - Superior: 1 rem
+                                      - Direito: 0
+                                      - Inferior: 4 rem
+                                      - Esquerdo: 0 */
         }
+        
 
-        .main-content-text a {
-            color: white;
-            background: red;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 2rem;
+        .plac-description .sac {
+            color: white; /* Define a cor do texto como branco. */
+            background: red; /* Define o fundo do botão como vermelho. */
+            padding: 1rem 2rem; /* Adiciona espaçamento interno:
+                                  - Superior e Inferior: 1 rem
+                                  - Direito e Esquerdo: 2 rem */
+            border-radius: 50px; /* Arredonda os cantos do botão, deixando-o com bordas circulares. */
+            font-size: 2rem; /* Define o tamanho da fonte como 2 rem. */
+            text-decoration: none; /* Remove o sublinhado padrão de links. */
+            display: inline-block; /* Permite o uso de margens e paddings enquanto mantém o botão em linha com outros elementos. */
+            margin-right: 1rem; /* Adiciona espaçamento à direita do botão. */
         }
-
-        .main-content-text a:hover {
-            transition: 3s;
-        }
-
-        .main-content-text .espaco {
-            line-height: 2rem;
-        }
+        
 
         .sac {
-            font-family: 'Gotham', sans-serif;
-            font-weight: 700;
-            font-size: 4rem;
-            text-decoration: none;
-            flex-flow: column nowrap;
+            font-family: 'Gotham', sans-serif; /* Usa a fonte 'Gotham' como primária. */
+            font-weight: 700; /* Define o peso da fonte como negrito. */
+            font-size: 4rem; /* Define um tamanho grande para o texto. */
+            text-decoration: none; /* Remove o sublinhado padrão. */
+            flex-flow: column nowrap; /* Define o fluxo de layout flexível:
+                                        - `column`: organiza itens verticalmente.
+                                        - `nowrap`: impede que os itens quebrem para novas linhas. */
         }
+        
+
+        .picture {
+            text-align: right; /* Alinha o conteúdo interno (como imagens) à direita. */
+            flex-shrink: 0; /* Impede que o elemento encolha caso o espaço disponível seja reduzido. */
+        }
+        
+
+        .picture img {
+            max-width: 100%; /* Garante que a largura da imagem nunca ultrapasse 100% de seu contêiner. */
+            height: auto; /* Ajusta automaticamente a altura proporcional à largura, mantendo a proporção da imagem. */
+        }
+        
 
         .main-footer {
             background: var(--color-gray-1);
