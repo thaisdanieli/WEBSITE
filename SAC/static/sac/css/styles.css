@@ -308,21 +308,76 @@ nav a:hover {
     color: var(--color-gray-7);
 }
 
-.main-Login {
-    border-radius: 2px;
-    background: red;
-    max-width: 40rem;
-    
+.main-content {
+    padding: 3rem;
 }
 
+.main-Login {  
+    background: var(--color-gray-1);
+    max-width: 1600rem;
+    
+    border: var(--color-gray-5);
+    display: grid;
+    border-radius: 5px;
+    box-shadow: -3.5px 5px 9px -4px var(--color-gray-2);
+    /*adicionar uma sombra a um retângulo em CSS*/
+}
+
+
 .groundLogin {
-    background: var(--color-gray-0);
+    background: var(--color-gray-1);
+    font-size: 3rem;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.body-main-form {
+    background: white;
+    margin: 3px;
+    border-radius: 3px;
+
+    /*CONFIGURAR FORM PARA ELE FICAR GRANDE*/
+}
+
+.form-login {
+    padding: 2rem;
+    width: 300px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.form-login label {
+    color: red;
+    font-size: 2rem;
+    font-family: 'Gotham', sans-serif ;
+    font-weight: 700;
+}
+
+.format-form-login {
+    border-radius: 20rem ;
+    border: black;
+}
+
+.main-bottum-login {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.bottum-login {
-    background: red;
-    color: white;
+.main-bottum-login button {
+    background-color: red;
     border-radius: 15px;
     font-size: 15px;
+    border: none;
+    /*remover a borda preta de um botão no CSS*/
+    padding: 1rem;
+
+    color: white;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
 }

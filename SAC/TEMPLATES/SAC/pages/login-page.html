@@ -9,17 +9,27 @@
             <div class="groundLogin">
                 <p>LOGIN</p>
             </div>
-            <div class="form-login">
-                <form action="">
-                    <label for="">LOGIN</label>
-                    <label for="">SENHA</label>
-                </form>
-            </div>
-            <div >
-                <button class="bottum-login">ACESSAR</button>
+            <div class="body-main-form">
+                <div class="form-login">
+                    <form action="format-form-login">
+                        <label for="email">LOGIN</label>
+                        <input type="email">
+                        <label for="password">SENHA</label>
+                        <input type="password">
+                    </form>
+                </div>
+                <div class="main-bottum-login">
+                    <button class="button">ACESSAR</button>
+                </div>
             </div>
         </div>
     </div>
 
 
 {% endblock content %}
+
+<!--O HTML também contém atributos que permitem que desenvolvedores web indiquem quais campos são obrigatórios e até mesmo o tipo de conteúdo que precisa ser inserido. -->
+<!--required: Torna o campo obrigatório.
+placeholder: Adiciona um texto de ajuda dentro do campo.
+maxlength: Limita o número máximo de caracteres.
+pattern: Define um padrão regex para validação.-->
