@@ -7,3 +7,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'SAC/pages/home.html',
                   context={'name': 'Plac'})
+
+
+def login(request):
+    return render(request, 'SAC\pages\login-page.html',
+                  context={'name': 'Login'})

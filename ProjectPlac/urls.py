@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('SAC.urls')),
+    path('', include('SAC.urls')),  # Incluindo urls do APP sac
 ]

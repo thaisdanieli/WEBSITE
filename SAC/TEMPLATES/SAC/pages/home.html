@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    {% include "SAC/partials/head.html" %} 
+{% extends "C:\Users\User\Documents\WEBSITE\base_templates\global\base.html" %}
 
-<body>
-    <div class="main-header-container">
-        <div class="container-center ">
-            <div class="center">
-                <h1 class="main-logo">
-                    <a href="/" title="Plac"></a>
-                    <img src="static/ImagensTemplate/logoPrincipal.jpg" width="200" height="60" alt="Logo Plac">
-                </h1>
-                <nav class="menu-container">
-                    <ul class="menu">
-                        <li class="item"><a href="/">HOME</a></li>
-                        <li class="item"><a href="https://loja.plac.com.br/">SERVIÇOS</a></li>
-                        <li class="item"><a href="https://www.plac.com.br/fale-conosco/">FALE CONOSCO</a></li>
-                        <li class="item"><a href="https://loja.plac.com.br/conta/login/">ENTRE/CADASTRE-SE</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <div class="">
-        <div class="">
-            <div class=""></div>
-        </div>
-    </div>
-
-     <main class="main-content-container">
+{% block title %}Home| {% endblock title %}
+    
+{% block content %}
         <div class="main-content">
             <div class="main-content-text">
                 <h2 class="title title-h2">BEM-VINDO AO</h2>
@@ -43,40 +18,8 @@
                     <img src="static/ImagensTemplate/home.jpg" width="800" height="600" alt="">
                 </a>
             </div>
-        </div>
-     </main>   
+        </div> 
+{% endblock content %}  
 
-    <footer class="main-footer">
-        <div class="footer-section">
-            <div>
-                <a class="location" href="https://maps.app.goo.gl/fipHoqSSuSP9Ctbr9"><i class="fa-solid fa-location-dot " aria-label="Abrir localização no Google Maps"></i> LOCALIZAÇÃO</a>
-                <address class=" footer-address">
-                    R. Antônio Fernandes Figuerôa, 1691 <br> Lagoinha, Ribeirão Preto - SP <br> CEP 14095-280
-                </address>
-            </div>
-            <div class="">
-                <h2>CONTATOS</h2>
-                <a class="footer-information"><i class="fa-solid fa-square-phone"></i> (16) 3635-9546</a>
-                <br>
-                <a class="footer-information"><i class="fa-brands fa-square-whatsapp"></i> (16) 3625-1074</a>
-                <h2>REDES SOCIAIS</h2>
-                <a class="footer-information" href="https://www.instagram.com/placfestas/"><i class="fa-brands fa-square-instagram"></i> @placfestas</a>
-                <br>
-                <a class="footer-information" href="https://www.facebook.com/placfestas/?locale=pt_BR"><i class="fa-brands fa-square-facebook"></i> Plac Festas</a>
-            </div>
-            <div class="">
-                <h2>COMPRE CONOSCO!</h2>
-                <a class="footer-information" href="https://loja.plac.com.br/"><i class="fa-sharp fa-solid fa-bag-shopping"></i></i> https://loja.plac.com.br/</a>
-                <br>
-                <a class="footer-information" href="https://www.plac.com.br/"><i class="fa-solid fa-globe" aria-label="Abrir site oficial"></i> https://www.plac.com.br/</a>
-                <h2>CATÁLOGO 2024</h2>
-                <a class="footer-information" href="https://heyzine.com/flip-book/39f626fb29.html"><i class="fa-sharp fa-solid fa-book-open"></i> Catálogo de Produtos</a>
-                <br>
-                <a class="footer-information" href="https://heyzine.com/flip-book/cce710b909.html"><i class="fa-solid fa-star"></i> Catálogo Especial</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
 
 
