@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Gotham';
-    src: url('../Fonts/Gotham-Black.otf') format('opentype');
-    font-weight: 900;
-    /* Black */
-    font-size: normal;
+    src: url('./static/Fonts/GothamBook.ttf') format('truetype');
+    font-weight: 400;
+    /* Regular */
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../Fonts/GothamBold.ttf') format('truetype');
+    src: url('./static/Fonts/GothamBold.ttf') format('truetype');
     font-weight: 700;
     /* Bold */
     font-style: normal;
@@ -16,12 +16,11 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../Fonts/GothamBook.ttf') format('truetype');
-    font-weight: 400;
-    /* Regular */
-    font-style: normal;
+    src: url('./static/Fonts/Gotham-Black.otf') format('truetype');
+    font-weight: 900;
+    /* Black */
+    font-size: normal;
 }
-
 
 :root {
     --color-primary: #269fe6;

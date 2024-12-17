@@ -3,27 +3,33 @@
 {% block title %} Login |{% endblock title %}
 
 {% block content %}
-    
-    <div class="main-content">
-        <div class="main-Login">
-            <div class="groundLogin">
-                <p>LOGIN</p>
-            </div>
-            <div class="body-main-form">
+
+<div class="main-content">
+    <div class="body-main-form">
+        <form action="">
+            <div class="main-Login">
+                <div class="groundLogin"><p>LOGIN</p></div>
                 <div class="form-login">
-                    <form action="format-form-login">
-                        <label for="email">LOGIN</label>
-                        <input type="email">
-                        <label for="password">SENHA</label>
-                        <input type="password">
-                    </form>
-                </div>
-                <div class="main-bottum-login">
-                    <button class="button">ACESSAR</button>
+                    <div class="input-box">
+                        <p> LOGIN</p>
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-box password">
+                        <p> SENHA</p>
+                        <input type="password" placeholder="Senha" required>
+                    </div>
+                    <div class="remember-forgot">
+                        <a class="center-form" href="#"> ESQUECI MINHA SENHA</a>
+                        <a class="center-form" href="#"> CADASTRE-SE</a>
+                    </div>
+                    <div class="main-bottum-login">
+                        <button type="submit" class="button">ACESSAR</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
+</div>
 
 
 {% endblock content %}

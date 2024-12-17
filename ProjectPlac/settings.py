@@ -118,13 +118,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/'  # URL para acessar os arquivos estáticos.
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'base_static',
+    # Pastas adicionais onde o Django deve procurar por arquivos estáticos durante o desenvolvimento.
+    BASE_DIR / 'static'
 ]
 
-static_root = BASE_DIR / 'static'
+# Pasta onde os arquivos estáticos serão coletados para produção.
+static_root = BASE_DIR, "staticfiles"
 
 
 # Default primary key field type
