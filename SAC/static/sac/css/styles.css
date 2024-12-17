@@ -164,7 +164,6 @@ nav a:hover {
     /* Define o tamanho da fonte em 6 rem (relativo ao tamanho da raiz). */
 }
 
-
 .main-content-text .title-h1 {
     font-family: 'Gotham', sans-serif;
     /* Aplica a mesma configuração de fonte usada no título anterior. */
@@ -178,7 +177,6 @@ nav a:hover {
     /* Adiciona um espaçamento interno mínimo ao redor do texto (0.5px é muito pequeno). */
 }
 
-
 .plac-description p {
     padding: 1rem 0 4rem 0;
     /* Adiciona espaçamento interno:
@@ -187,7 +185,6 @@ nav a:hover {
                                   - Inferior: 4 rem
                                   - Esquerdo: 0 */
 }
-
 
 .plac-description .sac {
     color: white;
@@ -209,7 +206,6 @@ nav a:hover {
     margin-right: 1rem;
     /* Adiciona espaçamento à direita do botão. */
 }
-
 
 .sac {
     font-family: 'Gotham', sans-serif;
@@ -244,17 +240,17 @@ nav a:hover {
 
 .main-footer {
     margin: 0;
-    padding: 0;
+    height:min-content;
     background: var(--color-gray-1);
     display: flex;
     /*Container flexível: Isso ativa o Flexbox, que é um sistema de layout para organizar os elementos filhos do container.*/
-    padding: 2rem;
+    padding: 1rem;
     /*Adiciona um espaçamento interno (padding) de 2rem em todos os lados do elemento.*/
     justify-content: center;
     /*Alinha os elementos filhos horizontalmente no centro do container.*/
     flex-flow: column nowrap;
     /*flex-direction: column; significa que os itens filhos serão dispostos em uma coluna vertical.
-          flex-wrap: nowrap; impede que os itens "quebrem" para uma nova linha, forçando-os a permanecer na mesma coluna.*/
+    flex-wrap: nowrap; impede que os itens "quebrem" para uma nova linha, forçando-os a permanecer na mesma coluna.*/
 }
 
 .footer-address {
@@ -270,13 +266,14 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    /*Define a largura do container como 100% do elemento pai.*/
-    max-width: 1170px;
+    /*Define a largura do container como 100% do elemento pai. Desta forma ele fixa as informações no meio centralizado*/
+    max-width:970px;
     /*Define uma largura máxima de 1170px para o container.
         Mesmo que o elemento pai seja maior, o container não ultrapassará 1170px de largura.*/
     margin: 0 auto;
     /*Isso centraliza o container horizontalmente dentro de seu elemento pai, 
         desde que uma largura (ou max-width) esteja definida.*/
+    padding: 1rem;
 }
 
 .footer-section .location {
@@ -293,7 +290,18 @@ nav a:hover {
 }
 
 .footer-information {
-    padding: 5px;
+    display: grid;
+}
+
+.footer-information h2 {
+    font-size: 15px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+    color: var(--color-gray-7);
+}
+
+.footer-information a{
+    padding: 3px;
     color: var(--color-gray-7);
     font-size: 12px;
     font-family: 'Gotham', sans-serif;
@@ -301,11 +309,8 @@ nav a:hover {
     text-decoration: none;
 }
 
-.footer-section h2 {
-    font-size: 15px;
-    font-family: 'Gotham', sans-serif;
-    font-weight: 700;
-    color: var(--color-gray-7);
+.footer-information h2:nth-of-type(2) {
+    margin-top: 15px;
 }
 
 .main-content {
@@ -323,7 +328,6 @@ nav a:hover {
     /*adicionar uma sombra a um retângulo em CSS*/
 }
 
-
 .groundLogin {
     background: var(--color-gray-1);
     font-size: 3rem;
@@ -339,7 +343,6 @@ nav a:hover {
     background: white;
     margin: 3px;
     border-radius: 3px;
-
     /*CONFIGURAR FORM PARA ELE FICAR GRANDE*/
 }
 
@@ -376,8 +379,9 @@ nav a:hover {
     border: none;
     /*remover a borda preta de um botão no CSS*/
     padding: 1rem;
-
     color: white;
     font-family: 'Gotham', sans-serif;
     font-weight: 700;
 }
+
+
