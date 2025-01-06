@@ -1,19 +1,29 @@
 {% load static %}
 <header class="main-header-container">
-    <div class="container-center ">
-        <div class="center">
-            <h1 class="main-logo">
-                <a href="/" title="Plac"></a>
-                <img src= "{% static 'ImagensTemplate\logoPrincipal.jpg' %}" width="200" height="60" alt="Logo Plac">
-            </h1>
-            <nav class="menu-container">
-                <ul class="menu">
-                    <li class="item"><a href="/">HOME</a></li>
-                    <li class="item"><a href="https://loja.plac.com.br/">SERVIÇOS</a></li>
-                    <li class="item"><a href="https://www.plac.com.br/fale-conosco/">FALE CONOSCO</a></li>
-                    <li class="item"><a href="https://loja.plac.com.br/conta/login/">ENTRE/CADASTRE-SE</a></li>
-                </ul>
-            </nav>
+    <nav class="container-center">
+        <h1 class="main-logo">
+            <a href="/" title="Plac"></a>
+            <img class="img" src= "{% static 'ImagensTemplate\logoPrincipal.jpg' %}" alt="Logo Plac">
+        </h1>
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="item"><a href="/">HOME</a></li>
+                <li class="item"><a href="https://loja.plac.com.br/">SERVIÇOS</a></li>
+                <li class="item"><a href="https://www.plac.com.br/fale-conosco/">FALE CONOSCO</a></li>
+                <li class="item"><a href="https://loja.plac.com.br/conta/login/">ENTRE/CADASTRE-SE</a></li>
+            </ul>
         </div>
+
+        <div class="mobile-menu-icon">
+            <button><img class="icon"src="static\ImagensTemplate\menu_white_36dp.svg" alt=""></button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="item"><a href="/">HOME</a></li>
+            <li class="item"><a href="https://loja.plac.com.br/">SERVIÇOS</a></li>
+            <li class="item"><a href="https://www.plac.com.br/fale-conosco/">FALE CONOSCO</a></li>
+            <li class="item"><a href="https://loja.plac.com.br/conta/login/">ENTRE/CADASTRE-SE</a></li>
+        </ul>
     </div>
 </header>
