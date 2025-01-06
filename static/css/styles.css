@@ -105,8 +105,7 @@ body {
 }
 
 .img {
-    display: flex;
-    align-items: center; /* Centraliza o logo verticalmente */
+    display: block;
     max-width: 200px; /* Ajuste de largura máximo */
     max-height: 60px; /* Ajuste de altura máximo */
 }
@@ -434,9 +433,21 @@ body {
 
 /* Estilos para telas pequenas (celulares) */
 @media screen and (max-width: 800px) {
-    .main-logo a img {
-        padding: 1.5rem 4rem;
-        vertical-align: middle;
+    .main-header-container {
+        display: flex;
+        padding: 0%;
+        justify-items: center;
+    }
+
+    .container-center {
+
+    }
+    .main-logo .img {
+        display: flex;
+        max-width: 8rem;
+        max-height: 8rem;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        align-items: center;
     }
     .menu-container {
         display: none; 
@@ -444,17 +455,24 @@ body {
     }
     .mobile-menu-icon {
         display: block;
+        left: 0;
     }
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
         cursor: pointer; 
         /*Define o cursor como uma "mãozinha" para indicar que o elemento é clicável.*/
+        margin-left: auto;
     }
 
     .footer-information {
         display: none;
     }
+
+    .footer-section {
+        justify-content: center;
+    }
+
     .footer-section-location {
         align-items: center;
     }
