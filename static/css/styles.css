@@ -138,7 +138,7 @@ body {
     display: flex;              /* Define o contêiner como um flex container, permitindo usar as propriedades do flexbox. */
     justify-content: center;    /* Alinha os itens filhos (conteúdo) horizontalmente no centro do contêiner. */
     align-items: center;        /* Alinha os itens filhos verticalmente no centro do contêiner. */
-    padding: 30px 20px 20px;    /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
+    padding: 30px 20px ;    /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
 }
 
 .main-content {
@@ -281,39 +281,40 @@ body {
 
 .body-main-form {
     background: white;                /* Define o fundo do contêiner como branco. */
-    margin: 3px;                        /* Define uma margem de 3px em todos os lados do contêiner. */
+                      /* Define uma margem de 3px em todos os lados do contêiner. */
     border: solid var(--color-gray-1);  /* Define a borda como sólida com a cor de 'var(--color-gray-1)' (uma variável CSS que provavelmente está definida em outro lugar do seu código). */
     border-radius: 5px;                 /* Define um arredondamento de 5px nas bordas do contêiner. Isso faz com que as bordas sejam suavemente arredondadas. */
     width: 100%;                        /* A largura do contêiner será 100% do elemento pai, ou seja, ocupará toda a largura disponível. */
-    max-width: 800px;                   /* A largura máxima do contêiner será 800px. Mesmo que o elemento pai seja maior, o contêiner não ultrapassará 800px de largura. */
-    margin: 7%;                         /* Define uma margem de 7% em todos os lados do contêiner. */
+    max-width: 800px;                  /* A largura máxima do contêiner será 800px. Mesmo que o elemento pai seja maior, o contêiner não ultrapassará 800px de largura.*/
+    margin: 7% auto;                   /* Define uma margem de 7% em todos os lados do contêiner e ajuda na responsividade. Assim a tela fixa cheia e não sobra espaço em branco.*/
+    box-shadow: -3.5px 5px 9px -4px var(--color-gray-1);
 }
 
 .main-Login {  
     background: var(--color-gray-0);    /* Define a cor de fundo usando uma variável CSS. A cor é armazenada em 'var(--color-gray-0)'. */
     width: 100%;                        /* Faz com que o contêiner ocupe toda a largura disponível da tela ou do elemento pai. */
-    max-width: 1500px;                  /* Define a largura máxima do contêiner como 1500px. Não importa o tamanho da tela, o contêiner não será maior que isso. */
+    max-width: 800px;                  /* Define a largura máxima do contêiner como 1500px. Não importa o tamanho da tela, o contêiner não será maior que isso. */
     margin: 0 auto;                     /* Aplica uma margem automática à esquerda e à direita, centralizando o contêiner na tela ou em seu elemento pai. */
-    border: var(--color-gray-5);        /* Define a cor da borda utilizando uma variável CSS 'var(--color-gray-5)'. */
+    /*border: var(--color-gray-5);        /* Define a cor da borda utilizando uma variável CSS 'var(--color-gray-5)'. */
     display: grid;                      /* Define que o contêiner usará o modelo de layout **Grid** para os itens internos, o que permite uma disposição mais complexa e controlada dos filhos. */
     border-radius: 5px;                 /* Aplica um arredondamento nas bordas do contêiner, com um raio de 5px. Isso cria bordas suavemente arredondadas. */
-    box-shadow: -3.5px 5px 9px -4px var(--color-gray-2); /* Aplica uma sombra ao redor do contêiner. O primeiro valor (-3.5px) é o deslocamento horizontal da sombra, o segundo (5px) é o deslocamento vertical, o terceiro (9px) é o desfoque da sombra, e o último valor (-4px) é o espalhamento da sombra. A cor da sombra é definida pela variável CSS 'var(--color-gray-2)'. */
+    /*box-shadow: -3.5px 5px 9px -4px var(--color-gray-1); /* Aplica uma sombra ao redor do contêiner. O primeiro valor (-3.5px) é o deslocamento horizontal da sombra, o segundo (5px) é o deslocamento vertical, o terceiro (9px) é o desfoque da sombra, e o último valor (-4px) é o espalhamento da sombra. A cor da sombra é definida pela variável CSS 'var(--color-gray-2)'. */
+    overflow: hidden;
 }
 
 .groundLogin {
     background: var(--color-gray-1);
     font-size: 3rem;
-    font-family: 'Gotham', sans-serif;
+    font-family: 'Gotham', sacns-serif;
     font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    width: 100%;
 }
 
 .form-login {
     background: white;
-    padding: 1rem;
     width: 100%;
     margin: 0 auto;
 }
@@ -351,6 +352,7 @@ body {
     font-family: 'Gotham', sans-serif;
     font-size: 1rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .main-bottum-login button {
