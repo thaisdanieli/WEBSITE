@@ -77,6 +77,7 @@
 * {
     padding: 0;
     margin: 0;
+
 }
 
 /* Define o tamanho da fonte base no HTML para facilitar cálculos rem */
@@ -95,6 +96,7 @@ body {
 .main-header-container {
     background: red;
     padding: 1rem;
+    margin: 0;
 }
 
 /* Alinha logo e menu */
@@ -106,8 +108,8 @@ body {
 
 .img {
     display: block;
-    max-width: 200px; /* Ajuste de largura máximo */
-    max-height: 60px; /* Ajuste de altura máximo */
+    max-width: 150px; /* Ajuste de largura máximo */
+    max-height: 50px; /* Ajuste de altura máximo */
 }
 
 .menu {
@@ -146,35 +148,27 @@ body {
     display: none;
 }
 
-
-
 .main-content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-
-    /*Diminuir imagem e Texto*/
-
+    margin: 0;                  /* Remove qualquer margem ao redor do contêiner, ou seja, deixa o contêiner sem margem externa. */
+    display: flex;              /* Define o contêiner como um flex container, permitindo usar as propriedades do flexbox. */
+    justify-content: center;    /* Alinha os itens filhos (conteúdo) horizontalmente no centro do contêiner. */
+    align-items: center;        /* Alinha os itens filhos verticalmente no centro do contêiner. */
+    padding: 30px 20px 20px;    /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
 }
 
 .main-content {
     max-width: 1500px;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    /* Organiza os elementos em linha (horizontalmente) */
-    align-items: flex-start;
-    /* Alinha os elementos ao topo */
-    justify-content: center;
-    /*Adiciona espaçamento entre texto e imagem */
+    flex-direction: row;        /* Organiza os elementos em linha (horizontalmente) */ 
+    align-items: flex-start;    /* Alinha os elementos ao topo */
+    justify-content: center;    /*Adiciona espaçamento entre texto e imagem */
+    
 }
 
 .main-content-text {
-    max-width: 64rem;
-    /* Define uma largura máxima para o elemento. Isso limita o tamanho do conteúdo mesmo em telas maiores. */
-    margin-left: 0 auto;
-    /* Centraliza o elemento horizontalmente, já que `auto` nas margens funciona em conjunto com largura fixa ou máxima. */
+    max-width: 64rem;       /* Define uma largura máxima para o elemento. Isso limita o tamanho do conteúdo mesmo em telas maiores. */
+    margin-left: 0 auto;    /* Centraliza o elemento horizontalmente, já que `auto` nas margens funciona em conjunto com largura fixa ou máxima. */
 }
 
 
@@ -212,70 +206,48 @@ body {
 }
 
 .plac-description .sac {
-    color: white;
-    /* Define a cor do texto como branco. */
-    background: red;
-    /* Define o fundo do botão como vermelho. */
-    padding: 1rem 2rem;
-    /* Adiciona espaçamento interno:
-                              - Superior e Inferior: 1 rem
-                              - Direito e Esquerdo: 2 rem */
-    border-radius: 50px;
-    /* Arredonda os cantos do botão, deixando-o com bordas circulares. */
-    font-size: 2rem;
-    /* Define o tamanho da fonte como 2 rem. */
-    text-decoration: none;
-    /* Remove o sublinhado padrão de links. */
-    display: inline-block;
-    /* Permite o uso de margens e paddings enquanto mantém o botão em linha com outros elementos. */
-    margin-right: 1rem;
-    /* Adiciona espaçamento à direita do botão. */
+    color: white;           /* Define a cor do texto como branco. */
+    background: red;        /* Define o fundo do botão como vermelho. */
+    padding: 1rem 2rem;       /* Adiciona espaçamento interno: - Superior e Inferior: 1 rem - Direito e Esquerdo: 2 rem */
+    border-radius: 50px;      /* Arredonda os cantos do botão, deixando-o com bordas circulares. */
+    font-size: 2rem;          /* Define o tamanho da fonte como 2 rem. */
+    text-decoration: none;    /* Remove o sublinhado padrão de links. */  
+    display: inline-block;    /* Permite o uso de margens e paddings enquanto mantém o botão em linha com outros elementos. */
+    margin-right: 1rem;       /* Adiciona espaçamento à direita do botão. */
+    
 }
 
 .sac {
-    font-family: 'Gotham', sans-serif;
-    /* Usa a fonte 'Gotham' como primária. */
-    font-weight: 700;
-    /* Define o peso da fonte como negrito. */
-    font-size: 4rem;
-    /* Define um tamanho grande para o texto. */
-    text-decoration: none;
-    /* Remove o sublinhado padrão. */
-    flex-flow: column nowrap;
-    /* Define o fluxo de layout flexível:
-                                    - `column`: organiza itens verticalmente.
-                                    - `nowrap`: impede que os itens quebrem para novas linhas. */
+    font-family: 'Gotham', sans-serif;  /* Usa a fonte 'Gotham' como primária. */
+    font-weight: 700;                   /* Define o peso da fonte como negrito. */
+    font-size: 4rem;                    /* Define um tamanho grande para o texto. */
+    text-decoration: none;              /* Remove o sublinhado padrão. */
+    flex-flow: column nowrap;          /* Define o fluxo de layout flexível: - `column`: organiza itens verticalmente. - `nowrap`: impede que os itens quebrem para novas linhas. */
+                              
 }
 
-
 .picture {
-    text-align: right;
-    /* Alinha o conteúdo interno (como imagens) à direita. */
-    /*flex-shrink: 0;  Impede que o elemento encolha caso o espaço disponível seja reduzido. */
+    text-align: right;      /* Alinha o conteúdo interno (como imagens) à direita. */
 }
 
 .picture img {
-    max-width: 100%;
-    /* Garante que a largura da imagem nunca ultrapasse 100% de seu contêiner. */
-    width: auto; /* Mantém a largura proporcional ao tamanho do contêiner. */
-    height: auto;
-    /* Ajusta automaticamente a altura proporcional à largura, mantendo a proporção da imagem. */
+    max-width: 100%;       /* Garante que a largura da imagem nunca ultrapasse 100% de seu contêiner. */
+    max-width: 100%; 
+    max-height: 55rem;  /* Define um limite máximo para a largura */
+    width: 100%;        /*Mantém a largura proporcional ao tamanho do contêiner. */
+    height: 100%;       /*Ajusta automaticamente a altura proporcional à largura, mantendo a proporção da imagem. */
 }
-
 
 .main-footer {
     margin: 0;
     height:min-content;
     background: var(--color-gray-1);
-    display: flex;
-    /*Container flexível: Isso ativa o Flexbox, que é um sistema de layout para organizar os elementos filhos do container.*/
-    padding: 1rem;
-    /*Adiciona um espaçamento interno (padding) de 2rem em todos os lados do elemento.*/
-    justify-content: center;
-    /*Alinha os elementos filhos horizontalmente no centro do container.*/
-    flex-flow: column nowrap;
-    /*flex-direction: column; significa que os itens filhos serão dispostos em uma coluna vertical.
-    flex-wrap: nowrap; impede que os itens "quebrem" para uma nova linha, forçando-os a permanecer na mesma coluna.*/
+    display: flex;              /*Container flexível: Isso ativa o Flexbox, que é um sistema de layout para organizar os elementos filhos do container.*/
+    padding: 1rem;              /*Adiciona um espaçamento interno (padding) de 2rem em todos os lados do elemento.*/
+    justify-content: center;    /*Alinha os elementos filhos horizontalmente no centro do container.*/
+    flex-flow: column nowrap;   /*flex-direction: column; significa que os itens filhos serão dispostos em uma coluna vertical.
+                                flex-wrap: nowrap; impede que os itens "quebrem" para uma nova linha, forçando-os a permanecer na mesma coluna.*/
+    
 }
 
 .footer-address {
@@ -288,17 +260,13 @@ body {
 
 .footer-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    /*Define a largura do container como 100% do elemento pai. Desta forma ele fixa as informações no meio centralizado*/
-    max-width:970px;
-    /*Define uma largura máxima de 1170px para o container.
-        Mesmo que o elemento pai seja maior, o container não ultrapassará 1170px de largura.*/
-    margin: 0 auto;
-    /*Isso centraliza o container horizontalmente dentro de seu elemento pai, 
-        desde que uma largura (ou max-width) esteja definida.*/
-    padding: 1rem;
+    align-items: center;                /* Alinha verticalmente os itens no centro */
+    justify-content: space-evenly;      /* Distribui os itens com espaçamento uniforme */
+    width: 100%;                        /* Garante que a largura ocupe 100% do contêiner pai */
+    max-width: 1170px;                  /* Define um limite máximo de largura para o footer */
+    margin: 0 auto;                     /* Centraliza o footer horizontalmente */
+    text-align: center;                 /* Centraliza o texto dentro do contêiner */
+    overflow: hidden;                   /* Esconde qualquer transbordamento */
 }
 
 .footer-section .location {
@@ -339,28 +307,24 @@ body {
 }
 
 .body-main-form {
-    background: white;
-    margin: 3px;
-    border: solid var(--color-gray-1);
-    border-radius: 5px;
-    /*CONFIGURAR FORM PARA ELE FICAR GRANDE*/
-
-    width: 100%;
-    max-width: 800px;
-    margin: 7%;
+    background: white;                /* Define o fundo do contêiner como branco. */
+    margin: 3px;                        /* Define uma margem de 3px em todos os lados do contêiner. */
+    border: solid var(--color-gray-1);  /* Define a borda como sólida com a cor de 'var(--color-gray-1)' (uma variável CSS que provavelmente está definida em outro lugar do seu código). */
+    border-radius: 5px;                 /* Define um arredondamento de 5px nas bordas do contêiner. Isso faz com que as bordas sejam suavemente arredondadas. */
+    width: 100%;                        /* A largura do contêiner será 100% do elemento pai, ou seja, ocupará toda a largura disponível. */
+    max-width: 800px;                   /* A largura máxima do contêiner será 800px. Mesmo que o elemento pai seja maior, o contêiner não ultrapassará 800px de largura. */
+    margin: 7%;                         /* Define uma margem de 7% em todos os lados do contêiner. */
 }
 
 .main-Login {  
-    background: var(--color-gray-0);
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    
-    border: var(--color-gray-5);
-    display: grid;
-    border-radius: 5px;
-    box-shadow: -3.5px 5px 9px -4px var(--color-gray-2);
-    /*adicionar uma sombra a um retângulo em CSS*/
+    background: var(--color-gray-0);    /* Define a cor de fundo usando uma variável CSS. A cor é armazenada em 'var(--color-gray-0)'. */
+    width: 100%;                        /* Faz com que o contêiner ocupe toda a largura disponível da tela ou do elemento pai. */
+    max-width: 1500px;                  /* Define a largura máxima do contêiner como 1500px. Não importa o tamanho da tela, o contêiner não será maior que isso. */
+    margin: 0 auto;                     /* Aplica uma margem automática à esquerda e à direita, centralizando o contêiner na tela ou em seu elemento pai. */
+    border: var(--color-gray-5);        /* Define a cor da borda utilizando uma variável CSS 'var(--color-gray-5)'. */
+    display: grid;                      /* Define que o contêiner usará o modelo de layout **Grid** para os itens internos, o que permite uma disposição mais complexa e controlada dos filhos. */
+    border-radius: 5px;                 /* Aplica um arredondamento nas bordas do contêiner, com um raio de 5px. Isso cria bordas suavemente arredondadas. */
+    box-shadow: -3.5px 5px 9px -4px var(--color-gray-2); /* Aplica uma sombra ao redor do contêiner. O primeiro valor (-3.5px) é o deslocamento horizontal da sombra, o segundo (5px) é o deslocamento vertical, o terceiro (9px) é o desfoque da sombra, e o último valor (-4px) é o espalhamento da sombra. A cor da sombra é definida pela variável CSS 'var(--color-gray-2)'. */
 }
 
 .groundLogin {
@@ -434,49 +398,88 @@ body {
 /* Estilos para telas pequenas (celulares) */
 @media screen and (max-width: 800px) {
     .main-header-container {
-        display: flex;
-        padding: 0%;
-        justify-items: center;
+        display: flex; /* Transforma o contêiner em flexbox para alinhar os elementos filhos de forma flexível. */
+        padding: 1rem; /* Adiciona espaçamento interno ao redor do contêiner. */
+        justify-content: space-between; /* Distribui os elementos horizontalmente com o maior espaço possível entre eles. */
+        align-items: center; /* Centraliza os elementos verticalmente no contêiner. */
     }
 
     .container-center {
+        flex-grow: 1; /* Faz com que o contêiner cresça e ocupe o espaço restante disponível horizontalmente. */
+        display: flex; /* Define o layout flexível para os elementos dentro do contêiner. */
+        justify-content: space-between; /* Distribui os elementos filhos horizontalmente com espaço entre eles. */
+        align-items: center; /* Alinha verticalmente os itens no centro. */
+    }
 
+    .main-logo {
+        display: flex; /* Torna o contêiner flexível. */
+        justify-content: center; /* Centraliza os itens horizontalmente dentro do contêiner. */
+        align-items: center; /* Centraliza os itens verticalmente dentro do contêiner. */
+        margin: 1REM;
     }
+
     .main-logo .img {
-        display: flex;
-        max-width: 8rem;
-        max-height: 8rem;
-        margin: 0 auto; /* Centraliza horizontalmente */
-        align-items: center;
+        max-width: 10rem; /* Limita a largura máxima da imagem para 10 rem. */
+        max-height: 10rem; /* Limita a altura máxima da imagem para 10 rem. */
     }
+
     .menu-container {
-        display: none; 
-        /*O menu principal será escondido para telas menores.*/
+        display: none; /* Oculta o menu principal em dispositivos menores para evitar sobrecarga visual. */
     }
+
     .mobile-menu-icon {
-        display: block;
-        left: 0;
+        display: flex; /* Torna o ícone visível em dispositivos menores. */
+        justify-content: flex-start; /* Alinha o ícone à esquerda dentro do contêiner. */
+        align-items: center; /* Centraliza verticalmente o ícone dentro do contêiner. */
     }
+
     .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer; 
-        /*Define o cursor como uma "mãozinha" para indicar que o elemento é clicável.*/
-        margin-left: auto;
+        background-color: transparent; /* Remove o fundo padrão do botão. */
+        border: none; /* Remove a borda do botão. */
+        cursor: pointer; /* Mostra o cursor "mãozinha" para indicar que o botão é clicável. */
+        margin-left: auto; /* Empurra o botão para o lado direito. */
+    }
+
+    .plac-description .sac {
+        padding: 0.5rem 1rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .picture {
+        padding: 2rem 0 0 0;
     }
 
     .footer-information {
-        display: none;
+        display: none; /* Oculta as informações do rodapé em dispositivos menores. */
     }
 
     .footer-section {
-        justify-content: center;
+        justify-content: center; /* Centraliza os itens horizontalmente dentro desta seção. */
     }
 
     .footer-section-location {
-        align-items: center;
+        align-items: center; /* Centraliza os itens verticalmente dentro desta seção. */
     }
+
     .footer-address {
-        text-align: center;
+        text-align: center; /* Centraliza o texto do endereço horizontalmente. */
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .plac-description p{
+        text-align:justify;
+    }
+
+    .main-content-text .title-h1 {
+        font-size: 5rem;
+        padding: 0%;
+    }
+
+    .main-content-text .title-h2 {
+        font-size: 3.5rem;
     }
 }
