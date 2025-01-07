@@ -22,14 +22,6 @@
     font-size: normal;
 }
 
-
-
-/* Estilos para telas médias (tablets) */
-
-
-/* Estilos para telas grandes (desktops) */
-
-
 :root {
     --color-primary: #269fe6;
     --color-primary-hover: #2086c2;
@@ -64,12 +56,9 @@
     --color-gray-9: #191919;
 
 
-    --font-primary: sans-serif;
-    /* Fonte principal */
-    --font-headings: 'Roboto Slab', serif;
-    /* Fonte para títulos */
-    --spacing-gutter-medium: 3rem;
-    /* Espaçamento médio */
+    --font-primary: sans-serif;             /* Fonte principal */
+    --font-headings: 'Roboto Slab', serif;  /* Fonte para títulos */
+    --spacing-gutter-medium: 3rem;          /* Espaçamento médio */
     --spacing-gutter-large: 4rem;
 }
 
@@ -126,13 +115,9 @@ body {
     font-size: 16px;
     font-family: 'Gotham', sans-serif;
     font-weight: 700;
-    padding: 0.5rem 1rem;
-    /* Adiciona espaço ao redor do texto, para que o fundo fique maior que a palavra.
-                                padding: 0.5rem 1rem significa 0.5rem no topo e na base, e 1rem nas laterais. */
-    border-radius: 50px;
-    /* Deixa o fundo arredondado */
-    transition: 0.3s;
-    /* Animação suave */
+    padding: 0.5rem 1rem;   /* Adiciona espaço ao redor do texto, para que o fundo fique maior que a palavra. padding: 0.5rem 1rem significa 0.5rem no topo e na base, e 1rem nas laterais. */       
+    border-radius: 50px;    /* Deixa o fundo arredondado */
+    transition: 0.3s;       /* Animação suave */
 }
 
 .menu-container a:hover {
@@ -173,27 +158,18 @@ body {
 
 
 .main-content-text .title-h2 {
-    font-family: 'Gotham', sans-serif;
-    /* Define a fonte primária como 'Gotham'. Caso não esteja disponível, usa 'sans-serif' como reserva. */
-    color: #001369;
-    /* Define a cor do texto em um tom de azul escuro. */
-    font-weight: 700;
-    /* Define o peso da fonte como negrito (700 é equivalente a "bold"). */
-    font-size: 6rem;
-    /* Define o tamanho da fonte em 6 rem (relativo ao tamanho da raiz). */
+    font-family: 'Gotham', sans-serif;      /* Define a fonte primária como 'Gotham'. Caso não esteja disponível, usa 'sans-serif' como reserva. */
+    color: #001369;                       /* Define a cor do texto em um tom de azul escuro. */
+    font-weight: 700;                       /* Define o peso da fonte como negrito (700 é equivalente a "bold"). */
+    font-size: 6rem;                        /* Define o tamanho da fonte em 6 rem (relativo ao tamanho da raiz). */
 }
 
 .main-content-text .title-h1 {
-    font-family: 'Gotham', sans-serif;
-    /* Aplica a mesma configuração de fonte usada no título anterior. */
-    color: red;
-    /* Define a cor do texto como vermelho. */
-    font-size: 11rem;
-    /* Define o tamanho da fonte como 11 rem, o que a torna bem maior que `title-h2`. */
-    font-weight: 900;
-    /* Usa um peso de fonte ainda maior, tornando o texto extra negrito. */
-    padding: 0.5px;
-    /* Adiciona um espaçamento interno mínimo ao redor do texto (0.5px é muito pequeno). */
+    font-family: 'Gotham', sans-serif;       /* Aplica a mesma configuração de fonte usada no título anterior. */
+    color: red;                           /* Define a cor do texto como vermelho. */
+    font-size: 11rem;                       /* Define o tamanho da fonte como 11 rem, o que a torna bem maior que `title-h2`. */
+    font-weight: 900;                       /* Usa um peso de fonte ainda maior, tornando o texto extra negrito. */
+    padding: 0.5px;                         /* Adiciona um espaçamento interno mínimo ao redor do texto (0.5px é muito pequeno). */
 }
 
 .plac-description p {
@@ -214,7 +190,6 @@ body {
     text-decoration: none;    /* Remove o sublinhado padrão de links. */  
     display: inline-block;    /* Permite o uso de margens e paddings enquanto mantém o botão em linha com outros elementos. */
     margin-right: 1rem;       /* Adiciona espaçamento à direita do botão. */
-    
 }
 
 .sac {
@@ -222,8 +197,7 @@ body {
     font-weight: 700;                   /* Define o peso da fonte como negrito. */
     font-size: 4rem;                    /* Define um tamanho grande para o texto. */
     text-decoration: none;              /* Remove o sublinhado padrão. */
-    flex-flow: column nowrap;          /* Define o fluxo de layout flexível: - `column`: organiza itens verticalmente. - `nowrap`: impede que os itens quebrem para novas linhas. */
-                              
+    flex-flow: column nowrap;          /* Define o fluxo de layout flexível: - `column`: organiza itens verticalmente. - `nowrap`: impede que os itens quebrem para novas linhas. */                        
 }
 
 .picture {
@@ -231,11 +205,11 @@ body {
 }
 
 .picture img {
-    max-width: 100%;       /* Garante que a largura da imagem nunca ultrapasse 100% de seu contêiner. */
+    max-width: 100%;        /* Garante que a largura da imagem nunca ultrapasse 100% de seu contêiner. */
     max-width: 100%; 
-    max-height: 55rem;  /* Define um limite máximo para a largura */
-    width: 100%;        /*Mantém a largura proporcional ao tamanho do contêiner. */
-    height: 100%;       /*Ajusta automaticamente a altura proporcional à largura, mantendo a proporção da imagem. */
+    max-height: 55rem;      /* Define um limite máximo para a largura */
+    width: 100%;            /*Mantém a largura proporcional ao tamanho do contêiner. */
+    height: 100%;           /*Ajusta automaticamente a altura proporcional à largura, mantendo a proporção da imagem. */
 }
 
 .main-footer {
@@ -243,11 +217,10 @@ body {
     height:min-content;
     background: var(--color-gray-1);
     display: flex;              /*Container flexível: Isso ativa o Flexbox, que é um sistema de layout para organizar os elementos filhos do container.*/
-    padding: 1rem;              /*Adiciona um espaçamento interno (padding) de 2rem em todos os lados do elemento.*/
+    padding: 2rem 1rem 2rem;              /*Adiciona um espaçamento interno (padding) de 1rem em todos os lados do elemento.*/
     justify-content: center;    /*Alinha os elementos filhos horizontalmente no centro do container.*/
     flex-flow: column nowrap;   /*flex-direction: column; significa que os itens filhos serão dispostos em uma coluna vertical.
                                 flex-wrap: nowrap; impede que os itens "quebrem" para uma nova linha, forçando-os a permanecer na mesma coluna.*/
-    
 }
 
 .footer-address {
@@ -384,8 +357,7 @@ body {
     background-color: red;
     border-radius: 15px;
     font-size: 15px;
-    border: none;
-    /*remover a borda preta de um botão no CSS*/
+    border: none;               /*remover a borda preta de um botão no CSS*/
     padding: 5px 12px 5px 12px;
     color: white;
     font-family: 'Gotham', sans-serif;
@@ -398,46 +370,46 @@ body {
 /* Estilos para telas pequenas (celulares) */
 @media screen and (max-width: 800px) {
     .main-header-container {
-        display: flex; /* Transforma o contêiner em flexbox para alinhar os elementos filhos de forma flexível. */
-        padding: 1rem; /* Adiciona espaçamento interno ao redor do contêiner. */
+        display: flex;                  /* Transforma o contêiner em flexbox para alinhar os elementos filhos de forma flexível. */
+        padding: 1rem;                  /* Adiciona espaçamento interno ao redor do contêiner. */
         justify-content: space-between; /* Distribui os elementos horizontalmente com o maior espaço possível entre eles. */
-        align-items: center; /* Centraliza os elementos verticalmente no contêiner. */
+        align-items: center;            /* Centraliza os elementos verticalmente no contêiner. */
     }
 
     .container-center {
-        flex-grow: 1; /* Faz com que o contêiner cresça e ocupe o espaço restante disponível horizontalmente. */
-        display: flex; /* Define o layout flexível para os elementos dentro do contêiner. */
+        flex-grow: 1;                   /* Faz com que o contêiner cresça e ocupe o espaço restante disponível horizontalmente. */
+        display: flex;                  /* Define o layout flexível para os elementos dentro do contêiner. */
         justify-content: space-between; /* Distribui os elementos filhos horizontalmente com espaço entre eles. */
-        align-items: center; /* Alinha verticalmente os itens no centro. */
+        align-items: center;            /* Alinha verticalmente os itens no centro. */
     }
 
     .main-logo {
-        display: flex; /* Torna o contêiner flexível. */
-        justify-content: center; /* Centraliza os itens horizontalmente dentro do contêiner. */
-        align-items: center; /* Centraliza os itens verticalmente dentro do contêiner. */
+        display: flex;              /* Torna o contêiner flexível. */
+        justify-content: center;    /* Centraliza os itens horizontalmente dentro do contêiner. */
+        align-items: center;        /* Centraliza os itens verticalmente dentro do contêiner. */
         margin: 1REM;
     }
 
     .main-logo .img {
-        max-width: 10rem; /* Limita a largura máxima da imagem para 10 rem. */
-        max-height: 10rem; /* Limita a altura máxima da imagem para 10 rem. */
+        max-width: 10rem;       /* Limita a largura máxima da imagem para 10 rem. */
+        max-height: 10rem;      /* Limita a altura máxima da imagem para 10 rem. */
     }
 
     .menu-container {
-        display: none; /* Oculta o menu principal em dispositivos menores para evitar sobrecarga visual. */
+        display: none;              /* Oculta o menu principal em dispositivos menores para evitar sobrecarga visual. */
     }
 
     .mobile-menu-icon {
-        display: flex; /* Torna o ícone visível em dispositivos menores. */
-        justify-content: flex-start; /* Alinha o ícone à esquerda dentro do contêiner. */
-        align-items: center; /* Centraliza verticalmente o ícone dentro do contêiner. */
+        display: flex;                  /* Torna o ícone visível em dispositivos menores. */
+        justify-content: flex-start;    /* Alinha o ícone à esquerda dentro do contêiner. */
+        align-items: center;            /* Centraliza verticalmente o ícone dentro do contêiner. */
     }
 
     .mobile-menu-icon button {
-        background-color: transparent; /* Remove o fundo padrão do botão. */
-        border: none; /* Remove a borda do botão. */
-        cursor: pointer; /* Mostra o cursor "mãozinha" para indicar que o botão é clicável. */
-        margin-left: auto; /* Empurra o botão para o lado direito. */
+        background-color: transparent;  /* Remove o fundo padrão do botão. */
+        border: none;                   /* Remove a borda do botão. */
+        cursor: pointer;                /* Mostra o cursor "mãozinha" para indicar que o botão é clicável. */
+        margin-left: auto;              /* Empurra o botão para o lado direito. */
     }
 
     .plac-description .sac {
@@ -451,7 +423,7 @@ body {
     }
 
     .footer-information {
-        display: none; /* Oculta as informações do rodapé em dispositivos menores. */
+        display: none;          /* Oculta as informações do rodapé em dispositivos menores. */
     }
 
     .footer-section {
@@ -459,11 +431,11 @@ body {
     }
 
     .footer-section-location {
-        align-items: center; /* Centraliza os itens verticalmente dentro desta seção. */
+        align-items: center;    /* Centraliza os itens verticalmente dentro desta seção. */
     }
 
     .footer-address {
-        text-align: center; /* Centraliza o texto do endereço horizontalmente. */
+        text-align: center;     /* Centraliza o texto do endereço horizontalmente. */
     }
 
     .main-content {
