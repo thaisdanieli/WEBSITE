@@ -138,11 +138,12 @@ body {
     display: flex;              /* Define o contêiner como um flex container, permitindo usar as propriedades do flexbox. */
     justify-content: center;    /* Alinha os itens filhos (conteúdo) horizontalmente no centro do contêiner. */
     align-items: center;        /* Alinha os itens filhos verticalmente no centro do contêiner. */
-    padding: 30px 20px ;    /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
+    padding: 60px 20px;    /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
+    min-width: 100%;
 }
 
 .main-content {
-    max-width: 1500px;
+    max-width: 1600px;
     width: 100%;
     display: flex;
     flex-direction: row;        /* Organiza os elementos em linha (horizontalmente) */ 
@@ -153,7 +154,7 @@ body {
 
 .main-content-text {
     max-width: 64rem;       /* Define uma largura máxima para o elemento. Isso limita o tamanho do conteúdo mesmo em telas maiores. */
-    margin-left: 0 auto;    /* Centraliza o elemento horizontalmente, já que `auto` nas margens funciona em conjunto com largura fixa ou máxima. */
+    margin-left: 0 ;    /* Centraliza o elemento horizontalmente, já que `auto` nas margens funciona em conjunto com largura fixa ou máxima. */
 }
 
 
@@ -290,11 +291,16 @@ body {
     box-shadow: -3.5px 5px 9px -4px var(--color-gray-1);
 }
 
+.body-main-form form {
+    border-radius: 5px;
+    background: #001369;
+}
+
 .main-Login {  
     background: var(--color-gray-0);    /* Define a cor de fundo usando uma variável CSS. A cor é armazenada em 'var(--color-gray-0)'. */
     width: 100%;                        /* Faz com que o contêiner ocupe toda a largura disponível da tela ou do elemento pai. */
     max-width: 800px;                  /* Define a largura máxima do contêiner como 1500px. Não importa o tamanho da tela, o contêiner não será maior que isso. */
-    margin: 0 auto;                     /* Aplica uma margem automática à esquerda e à direita, centralizando o contêiner na tela ou em seu elemento pai. */
+                        /* Aplica uma margem automática à esquerda e à direita, centralizando o contêiner na tela ou em seu elemento pai. */
     /*border: var(--color-gray-5);        /* Define a cor da borda utilizando uma variável CSS 'var(--color-gray-5)'. */
     display: grid;                      /* Define que o contêiner usará o modelo de layout **Grid** para os itens internos, o que permite uma disposição mais complexa e controlada dos filhos. */
     border-radius: 5px;                 /* Aplica um arredondamento nas bordas do contêiner, com um raio de 5px. Isso cria bordas suavemente arredondadas. */
@@ -303,6 +309,7 @@ body {
 }
 
 .groundLogin {
+    border-radius: 5px 5px 0 0;
     background: var(--color-gray-1);
     font-size: 3rem;
     font-family: 'Gotham', sacns-serif;
@@ -316,7 +323,7 @@ body {
 .form-login {
     background: white;
     width: 100%;
-    margin: 0 auto;
+    
 }
 
 .form-login p {
@@ -335,9 +342,9 @@ body {
     border: 1.5px solid var(--color-gray-1);
     height: 2rem;
     background-color: white;
-
     width: 30rem;
     margin-top: 3px;
+    padding: 5px;
 }
 
 .form-login div {
@@ -366,11 +373,81 @@ body {
     font-weight: 700;
 }
 
+.main-form-register {
+    display: flex;
+}
+
+.main-form-register .form-register {
+    padding: 0 4rem 0 0;
+}
+
+.maintitle-form h1{
+    font-size: 4rem;
+    color:#001369; /*AZUL PLAC*/
+    font-family: 'Gotham', sans-serif;
+    font-weight: 900;
+    padding: 0 0 1rem;
+}
+
+
+.register {
+    display: grid;
+    padding: 1rem;
+}
+
+.register input{
+    border-radius: 10px;
+    border: 1.5px solid var(--color-gray-4);
+    padding: 5px;
+    width: 30rem;
+}
+
+.register label{
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: 'Gotham', sans-serif;
+    color: var(--color-gray-6);
+}
+
+.title-form {
+    color: red;
+    font-size: 2.5rem;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-button {
+    display: flex;
+    margin: 2rem;
+    position: absolute;
+    justify-items: end;
+}
+.button-register {
+    background: red;
+    color: white;
+    border-radius: 2rem;
+    padding: 5px 25px 5px;
+    border: none;
+
+    font-family: 'Gotham', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
 
 /* Responsividade */
 
 /* Estilos para telas pequenas (celulares) */
 @media screen and (max-width: 800px) {
+    .main-content-container {
+        padding: 40px 20px;
+    }
     .main-header-container {
         display: flex;                  /* Transforma o contêiner em flexbox para alinhar os elementos filhos de forma flexível. */
         padding: 1rem;                  /* Adiciona espaçamento interno ao redor do contêiner. */
@@ -455,5 +532,18 @@ body {
 
     .main-content-text .title-h2 {
         font-size: 3.5rem;
+    }
+
+    .main-form-register {
+        overflow: hidden;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .data {
+        display: grid;
+        justify-content: center;
+        align-items:center;
     }
 }

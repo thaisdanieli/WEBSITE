@@ -12,3 +12,8 @@ def home(request):
 def login(request):
     return render(request, 'SAC\pages\login-page.html',
                   context={'name': 'Login'})
+
+
+def register(request):
+    return render(request, 'SAC/pages/register.html',
+                  context={'name': 'Cadastro'})
