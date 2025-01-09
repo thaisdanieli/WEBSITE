@@ -81,6 +81,10 @@ body {
     background: white;
 }
 
+/*Container Principal do Body*/
+.container-main {
+}
+
 /* Fundo do cabeçalho principal */
 .main-header-container {
     background: red;
@@ -133,13 +137,14 @@ body {
     display: none;
 }
 
+/*Main principal do body*/
 .main-content-container {
     margin: 0;                  /* Remove qualquer margem ao redor do contêiner, ou seja, deixa o contêiner sem margem externa. */
     display: flex;              /* Define o contêiner como um flex container, permitindo usar as propriedades do flexbox. */
     justify-content: center;    /* Alinha os itens filhos (conteúdo) horizontalmente no centro do contêiner. */
     align-items: center;        /* Alinha os itens filhos verticalmente no centro do contêiner. */
-    padding: 60px 20px;    /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
-    min-width: 100%;
+    padding: 60px 20px;         /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
+    min-width: 100%;            /*garante que o container ocupe pelo menos 100% da altura da tela, o que significa que o <footer> será empurrado para o fundo quando o conteúdo da <main> for pequeno, mas não será sobreposto*/
 }
 
 .main-content {

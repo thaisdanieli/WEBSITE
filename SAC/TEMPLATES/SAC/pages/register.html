@@ -14,7 +14,7 @@
                     </div>
                     <div class="register">
                         <label for="number">CPF | CNPJ</label>
-                        <input type=""required/>
+                        <input type="" required minlenght="11"/>
                     </div>
                     <div class="register">
                         <label for="">TELEFONE | WHATSAPP</label>
@@ -28,23 +28,23 @@
                 <div class="form-register">
                     <h1 class="title-form">DADOS DE ENVIO</h1>
                     <div class="register">
-                        <label for="">RUA</label>
+                        <label for="street">RUA</label>
                         <input type=""required/>
                     </div>
                     <div class="register">
-                        <label for="">BAIRRO</label>
+                        <label for="neighborhood">BAIRRO</label>
                         <input type=""required/>
                     </div>
                     <div class="register">
-                        <label for="">NÚMERO</label>
+                        <label for="number">NÚMERO</label>
                         <input type=""required/>
                     </div>
                     <div class="register">
-                        <label for="">CEP</label>
+                        <label for="zip">CEP</label>
                         <input type=""required/>
                     </div>
                     <div class="register">
-                        <label for="">ESTADO</label>
+                        <label for="state">ESTADO</label>
                         <input type=""required/>
                     </div>
                     <div class="register">
@@ -56,20 +56,20 @@
             <h1 class="title-form">DADOS DE ACESSO</h1>
             <div class="form-register data">
                 <div class="register">
-                    <label for="">EMAIL</label>
+                    <label for="email">EMAIL</label>
                     <input type=""required/>
                 </div>
                 <div class="register">
-                    <label for="">SENHA</label>
+                    <label for="password">SENHA</label>
                     <input type=""required/>
                 </div>
                 <div class="register">
-                    <label for="">CONFIRME SUA SENHA</label>
+                    <label for="password">CONFIRME SUA SENHA</label>
                     <input type="" autocomplete="off" required/>
                 </div>
             </div>
             <div class="form-button">
-                <button type="button" class="button-register">SALVAR</button>
+                <button type="submit" value="Send Request" class="button-register">SALVAR</button>
             </div>
         </form>
 {% endblock  %}
