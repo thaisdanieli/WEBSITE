@@ -144,7 +144,7 @@ body {
     justify-content: center;    /* Alinha os itens filhos (conteúdo) horizontalmente no centro do contêiner. */
     align-items: center;        /* Alinha os itens filhos verticalmente no centro do contêiner. */
     padding: 60px 20px;         /* Aplica preenchimento (padding) de 30px na parte superior, 20px na parte direita e esquerda, e 20px na parte inferior. */
-    min-width: 100%;            /*garante que o container ocupe pelo menos 100% da altura da tela, o que significa que o <footer> será empurrado para o fundo quando o conteúdo da <main> for pequeno, mas não será sobreposto*/
+               /*garante que o container ocupe pelo menos 100% da altura da tela, o que significa que o <footer> será empurrado para o fundo quando o conteúdo da <main> for pequeno, mas não será sobreposto*/
 }
 
 .main-content {
@@ -403,7 +403,7 @@ body {
 .register input{
     border-radius: 10px;
     border: 1.5px solid var(--color-gray-4);
-    padding: 5px;
+    padding: 6px 10px;
     width: 30rem;
 }
 
