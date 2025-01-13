@@ -1,75 +1,80 @@
 {% extends "C:\Users\User\Documents\WEBSITE\base_templates\global\base.html" %}
 
-{% block  title%} Cadastro |{% endblock  %}
+{% block title %} Cadastro | {% endblock %}
 
 {% block content %}
-        <form action="" method="post" autocomplete="on">
-            <div class="maintitle-form"><h1>NOVO CADASTRO</h1></div>
-            <div class="main-form-register">
-                <div class="form-register">
-                    <h1 class="title-form">DADOS PESSOAIS</h1>
-                    <div class="register">
-                        <label for="name">NOME COMPLETO</label>
-                        <input type="" required/>
-                    </div>
-                    <div class="register">
-                        <label for="number">CPF | CNPJ</label>
-                        <input type="" required minlenght="11"/>
-                    </div>
-                    <div class="register">
-                        <label for="">TELEFONE | WHATSAPP</label>
-                        <input type=""required/>
-                    </div>
-                    <div class="register">
-                        <label for="">DATA DE NASCIMENTO</label>
-                        <input type=""required/>
-                    </div>
-                </div>
-                <div class="form-register">
-                    <h1 class="title-form">DADOS DE ENVIO</h1>
-                    <div class="register">
-                        <label for="street">RUA</label>
-                        <input type=""required/>
-                    </div>
-                    <div class="register">
-                        <label for="neighborhood">BAIRRO</label>
-                        <input type=""required/>
-                    </div>
-                    <div class="register">
-                        <label for="number">NÚMERO</label>
-                        <input type=""required/>
-                    </div>
-                    <div class="register">
-                        <label for="zip">CEP</label>
-                        <input type=""required/>
-                    </div>
-                    <div class="register">
-                        <label for="state">ESTADO</label>
-                        <input type=""required/>
-                    </div>
-                    <div class="register">
-                        <label for="">COMPLEMENTO</label>
-                        <input type=""required/>
-                    </div>
-                </div> 
-            </div>
-            <h1 class="title-form">DADOS DE ACESSO</h1>
-            <div class="form-register data">
+    <form action="" method="post" autocomplete="on" class="form-container">
+        {% csrf_token %}
+        <div class="maintitle-form"><h1>NOVO CADASTRO</h1></div>
+        <div class="main-form-register">
+            <div class="form-register">
+                <h1 class="title-form">DADOS PESSOAIS</h1>
                 <div class="register">
-                    <label for="email">EMAIL</label>
-                    <input type=""required/>
+                    <label for="name">NOME COMPLETO</label>
+                    <input id="name" type="text" required />
                 </div>
                 <div class="register">
-                    <label for="password">SENHA</label>
-                    <input type=""required/>
+                    <label for="cpf_cnpj">CPF | CNPJ</label>
+                    <input id="cpf_cnpj" type="text" required minlength="11" />
                 </div>
                 <div class="register">
-                    <label for="password">CONFIRME SUA SENHA</label>
-                    <input type="" autocomplete="off" required/>
+                    <label for="phone">TELEFONE | WHATSAPP</label>
+                    <input id="phone" type="tel" required />
+                </div>
+                <div class="register">
+                    <label for="dob">DATA DE NASCIMENTO</label>
+                    <input id="dob" type="date" required />
                 </div>
             </div>
-            <div class="form-button">
-                <button type="submit" value="Send Request" class="button-register">SALVAR</button>
+            <div class="form-register form-register2">
+                <h1 class="title-form">DADOS DE ENVIO</h1>
+                <div class="register">
+                    <label for="street">RUA</label>
+                    <input id="street" type="text" required />
+                </div>
+                <div class="register">
+                    <label for="neighborhood">BAIRRO</label>
+                    <input id="neighborhood" type="text" required />
+                </div>
+                <div class="register">
+                    <label for="number">NÚMERO</label>
+                    <input id="number" type="text" required />
+                </div>
+                <div class="register">
+                    <label for="zip">CEP</label>
+                    <input id="zip" type="text" required />
+                </div>
+                <div class="register">
+                    <label for="state">ESTADO</label>
+                    <input id="state" type="text" required />
+                </div>
+                <div class="register">
+                    <label for="complement">COMPLEMENTO</label>
+                    <input id="complement" type="text" required />
+                </div>
+            </div> 
+        </div>
+
+        <h1 class="title-form">DADOS DE ACESSO</h1>
+
+        <div class="main-form-register data">
+            <div class="register">
+                <label for="email">EMAIL</label>
+                <input id="email" type="email" required autocomplete="email" />
             </div>
-        </form>
-{% endblock  %}
+            <div class="register">
+                <label for="password">SENHA</label>
+                <input id="password" type="password" required autocomplete="new-password" />
+            </div>
+            <div class="register">
+                <label for="confirm_password">CONFIRME SUA SENHA</label>
+                <input id="confirm_password" type="password" required autocomplete="off" />
+            </div>
+        </div>
+
+          <!-- Botão dentro do formulário -->
+        <div class="form-button">
+            <button type="submit" class="button-register">SALVAR</button>
+        </div>
+    </form>
+{% endblock %}

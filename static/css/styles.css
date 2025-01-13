@@ -378,12 +378,24 @@ body {
     font-weight: 700;
 }
 
+.form-container {
+    margin: 0 auto; /*Centraliza o formulário horizontalmente*/
+    
+}
+
 .main-form-register {
     display: flex;
 }
 
 .main-form-register .form-register {
     padding: 0 4rem 0 0;
+}
+
+.form-register2  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
 }
 
 .maintitle-form h1{
@@ -393,7 +405,6 @@ body {
     font-weight: 900;
     padding: 0 0 1rem;
 }
-
 
 .register {
     display: grid;
@@ -414,6 +425,10 @@ body {
     color: var(--color-gray-6);
 }
 
+.register label {
+    margin-left: 10px;           /*Esta propriedade está deslocando as labels para a direita sem centraliza-las*/
+}
+
 .title-form {
     color: red;
     font-size: 2.5rem;
@@ -421,7 +436,15 @@ body {
     font-weight: 700;
 }
 
+.form-register2 .title-form{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
 .data {
+    padding: 0 0 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -429,9 +452,8 @@ body {
 
 .form-button {
     display: flex;
-    margin: 2rem;
-    position: absolute;
-    justify-items: end;
+    justify-content: right;
+    overflow: hidden;
 }
 .button-register {
     background: red;
@@ -539,16 +561,31 @@ body {
         font-size: 3.5rem;
     }
 
-    .main-form-register {
+    .form-container {
         overflow: hidden;
-        display: grid;
+        width: 100%;
         justify-content: center;
         align-items: center;
     }
 
-    .data {
+    .main-form-register{
         display: grid;
-        justify-content: center;
-        align-items:center;
+        justify-content: left;
     }
+
+    .form-register2 {
+        grid-template-columns: none;
+    }
+
+    .form-button {
+        margin: 0 auto;
+        display: grid;
+        width: 100%;
+
+    }
+
+    .open {
+        display: block;
+    }
+    
 }
