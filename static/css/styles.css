@@ -380,7 +380,7 @@ body {
 
 .form-container {
     margin: 0 auto; /*Centraliza o formulário horizontalmente*/
-    
+    justify-self: center;
 }
 
 .main-form-register {
@@ -393,9 +393,12 @@ body {
 
 .form-register2  {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
+}
+
+.register-shipping-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);      /*grid-template-columns: Especifica o número e o tamanho das colunas no layout da grid.
+                                                repeat(2, 1fr): 2: Número de colunas. 1fr: Tamanho de cada coluna, ocupando partes iguais do espaço disponível no contêiner.*/
 }
 
 .maintitle-form h1{
@@ -416,6 +419,13 @@ body {
     border: 1.5px solid var(--color-gray-4);
     padding: 6px 10px;
     width: 30rem;
+}
+
+#email {
+    border-radius: 10px;
+    border: 1.5px solid var(--color-gray-4);
+    padding: 6px 10px;
+    width: 34rem;
 }
 
 .register label{
@@ -445,6 +455,11 @@ body {
 
 .data {
     padding: 0 0 1rem 0;
+    display:grid;
+    justify-content: left;
+}
+
+.register-access-data {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -467,6 +482,42 @@ body {
     font-weight: 900;
 }
 
+/*SAC.HTML*/
+
+.divs-complaint {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.complaint {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.form-complaint {
+    display: grid;
+    padding: 0 2rem;
+}
+
+.inputs-complaint {
+    display: grid;
+    padding: 1rem;
+}
+
+.button-complaint {
+    align-self: self-end;
+}
+
+.title-complaint {
+    padding: 1rem;
+}
+
+#input-complaint-text{
+    width: 43rem;
+    height: 12rem;
+}
 
 /* Responsividade */
 
@@ -568,12 +619,17 @@ body {
         align-items: center;
     }
 
+    .register-access-data {
+        display: grid;
+    }
+
     .main-form-register{
         display: grid;
         justify-content: left;
     }
 
-    .form-register2 {
+    .register-shipping-details {
+        display: grid;
         grid-template-columns: none;
     }
 
@@ -582,6 +638,10 @@ body {
         display: grid;
         width: 100%;
 
+    }
+
+    #email{
+        width: 30rem;
     }
 
     .open {

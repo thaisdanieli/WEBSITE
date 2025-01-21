@@ -1,0 +1,52 @@
+{% extends "C:\Users\User\Documents\WEBSITE\base_templates\global\base.html" %}
+
+{% block title %} SAC |{% endblock title %}
+
+{% block content %}
+<form action="" class="forms-complaint">
+        <div class="title-complaint">
+            <h1>FAÇA UMA RECLAMAÇÃO</h1>
+        </div>
+        <div class="divs-complaint">
+            <div class="complaint">
+                <div class="form-complaint">
+                    <div class="inputs-complaint">
+                        <label for="">PRODUTO</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="inputs-complaint">
+                        <label for="">LOJA DE ORIGEM DO PRODUTO</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="inputs-complaint">
+                        <label for="">VALOR DA COMPRA</label>
+                        <input type="number" step"0.1" required>
+                    </div>
+                    <div class="inputs-complaint upload">
+                        <label for="">UPLOAD</label>
+                        <input type="file" name="upload-complaint" id="" accept="image/*" required>
+                    </div>
+                </div>
+                <div class="form-complaint">
+                    <div class="inputs-complaint">
+                        <label for="">DATA DE FABRICAÇÃO</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="inputs-complaint">
+                        <label for="">QUANTIDADE</label>
+                        <input type="number" required>
+                    </div>
+                </div>
+                <div class="form-complaint">
+                    <div class="inputs-complaint">
+                        <label for="">RECLAMAÇÃO</label>
+                        <input id="input-complaint-text" type="text" required>
+                    </div>
+                    <div class="button-complaint">
+                        <button>ENVIAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+{% endblock content %}

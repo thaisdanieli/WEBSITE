@@ -10,10 +10,17 @@ def home(request):
 
 
 def login(request):
-    return render(request, 'SAC\pages\login-page.html',
+    return render(request, 'SAC/pages/login-page.html',
                   context={'name': 'Login'})
 
 
 def register(request):
     return render(request, 'SAC/pages/register.html',
                   context={'name': 'Cadastro'})
+
+
+def complaint(request):
+    return render(request, 'SAC/partials/sac.html',
+                  context={'name': 'Sac'})
+
+# Adicionar getattr nas reclamações

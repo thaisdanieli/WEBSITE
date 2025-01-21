@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('login/', views.login, name="login"),
     path('cadastro/', views.register, name="cadastro"),
+    path('sac/', views.complaint, name='sac'),
 ]
