@@ -378,6 +378,8 @@ body {
     font-weight: 700;
 }
 
+/*REGISTER.HTML*/
+
 .form-container {
     margin: 0 auto; /*Centraliza o formulário horizontalmente*/
     justify-self: center;
@@ -391,7 +393,7 @@ body {
     padding: 0 4rem 0 0;
 }
 
-.main-form-register input[type=text] {
+.main-form-register input[type="text"] {
     padding: 6px 10px;
     width: 30rem;
 }
@@ -402,7 +404,7 @@ body {
 
 .register-shipping-details {
     display: grid;
-    grid-template-columns: repeat(2, 1.5fr);      /*grid-template-columns: Especifica o número e o tamanho das colunas no layout da grid.
+    grid-template-columns: repeat(2, 1fr);      /*grid-template-columns: Especifica o número e o tamanho das colunas no layout da grid.
                                                 repeat(2, 1fr): 2: Número de colunas. 1fr: Tamanho de cada coluna, ocupando partes iguais do espaço disponível no contêiner.*/
 }
 
@@ -450,13 +452,6 @@ body {
     font-weight: 700;
 }
 
-.form-register2 .title-form{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
 .data {
     padding: 0 0 1rem 0;
     display:grid;
@@ -490,7 +485,6 @@ body {
 
 .divs-complaint {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
 }
@@ -498,12 +492,15 @@ body {
 .complaint {
     display: flex;
     align-items: baseline;
+    /*flex-direction: column;*/
+    /*flex-wrap: nowrap;*/
     flex-wrap: wrap;
 }
 
 .form-complaint {
     display: grid;
-    padding: 0 4rem;
+    padding: 0 4rem 0 0;
+    justify-items: left;
 }
 
 .inputs-complaint {
@@ -527,6 +524,7 @@ body {
 }
 
 .inputs-complaint label{
+    width: 100%;
     font-family: 'Gotham', sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -556,6 +554,12 @@ body {
     padding: 2rem;
     text-align: center;
     color: var(--color-gray-5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload label:hover{
+    background: var(--color-gray-1);
 }
 
 .upload h3 {
