@@ -212,7 +212,6 @@ body {
 
 .picture img {
     max-width: 100%;        /* Garante que a largura da imagem nunca ultrapasse 100% de seu contêiner. */
-    max-width: 100%; 
     max-height: 55rem;      /* Define um limite máximo para a largura */
     width: 100%;            /*Mantém a largura proporcional ao tamanho do contêiner. */
     height: 100%;           /*Ajusta automaticamente a altura proporcional à largura, mantendo a proporção da imagem. */
@@ -391,25 +390,7 @@ body {
 
 .main-form-register {
     display: flex;
-}
-
-.main-form-register .form-register {
-    padding: 0 4rem 0 0;
-}
-
-.main-form-register input[type="text"] {
-    padding: 6px 10px;
-    width: 30rem;
-}
-
-.form-register2  {
-    display: grid;
-}
-
-.register-shipping-details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);      /*grid-template-columns: Especifica o número e o tamanho das colunas no layout da grid.
-                                                repeat(2, 1fr): 2: Número de colunas. 1fr: Tamanho de cada coluna, ocupando partes iguais do espaço disponível no contêiner.*/
+    width: 100%;
 }
 
 .maintitle-form h1{
@@ -420,22 +401,51 @@ body {
     padding: 0 0 1rem;
 }
 
+.form-register-personal{
+    padding: 0 4rem 0 0;
+}
+
 .register {
-    display: grid;
     padding: 1rem;
 }
 
 .register input{
     border-radius: 10px;
     border: 1.5px solid var(--color-gray-4);
-    padding: 6px 10px;
+    padding: 6px;
+    width: 100%;
 }
 
-#email {
-    border-radius: 10px;
-    border: 1.5px solid var(--color-gray-4);
-    padding: 6px 10px;
-    width: 34rem;
+.input-small {
+    
+    max-width: 16rem;
+
+}
+
+.row {
+    width: 100%;
+    position: relative ;
+
+}
+
+.row div {
+    height: 100%;
+}
+
+.columm-2 {
+    width: 50%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.register-email {
+    width: 32rem;
 }
 
 .register label{
@@ -457,15 +467,23 @@ body {
 }
 
 .data {
+    width: 100%;
     padding: 0 0 1rem 0;
     display:grid;
     justify-content: left;
+    /*overflow: hidden;*/
 }
 
 .register-access-data {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.register-access-data div{
+    display: grid;
+    flex-direction: column;
 }
 
 .form-button {
@@ -483,6 +501,12 @@ body {
     font-family: 'Gotham', sans-serif;
     font-size: 1.5rem;
     font-weight: 900;
+}
+
+#estado {
+    border-radius: 10px;
+    padding: 6px 10px;
+    width: 100%;
 }
 
 /*SAC.HTML*/
@@ -723,7 +747,7 @@ body {
 
     .main-form-register{
         display: grid;
-        justify-content: left;
+        /*justify-content: left;*/
     }
 
     .register-shipping-details {
@@ -735,11 +759,6 @@ body {
         margin: 0 auto;
         display: grid;
         width: 100%;
-
-    }
-
-    #email{
-        width: 30rem;
     }
 
     .open {
@@ -748,11 +767,26 @@ body {
 
     #input-complaint-text {
         width: 100%;
-
     }
 
     .inputs-complaint input[type=text] {
         width: 100%;
     }
+
+    .register,
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-form-register .form-register{
+        padding: 0;
+    }
+
+    .register input {
+        width: 32rem;
+        max-width: 32rem;
+    }
+
     
 }

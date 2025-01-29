@@ -7,72 +7,101 @@
         {% csrf_token %}
         <div class="maintitle-form"><h1>NOVO CADASTRO</h1></div>
         <div class="main-form-register">
-            <div class="form-register">
-                <div><h1 class="title-form">DADOS PESSOAIS</h1></div>
+            <div class="form-register form-register-personal">
+                <h1 class="title-form">DADOS PESSOAIS</h1>
                 <div class="register">
                     <label for="name">NOME COMPLETO</label>
-                    <input id="name" type="text" required />
+                    <input id="name" name="name" type="text" required />
                 </div>
                 <div class="register">
                     <label for="cpf_cnpj">CPF | CNPJ</label>
-                    <input id="cpf_cnpj" type="number" required minlength="11" />
+                    <input id="cpf_cnpj" name="cpf_cnpj" type="text" required 
+                        pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" 
+                         class="input-small" />
                 </div>
                 <div class="register">
                     <label for="phone">TELEFONE | WHATSAPP</label>
-                    <input id="phone" type="tel" required />
+                    <input id="phone" name="phone" type="tel" required 
+                        pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" class="input-small"/>
                 </div>
                 <div class="register">
                     <label for="dob">DATA DE NASCIMENTO</label>
-                    <input id="dob" type="date" required />
+                    <input id="dob" name="dob" type="date" required />
                 </div>
             </div>
-            <div class="form-register form-register2">
-                <div class="title-form-register2">
-                    <h1 class="title-form">DADOS DE ENVIO</h1>
+        
+            <div class="form-register shipping-form">
+                <h1 class="title-form">DADOS DE ENVIO</h1>
+                <div class="register">
+                    <label for="street">RUA</label>
+                    <input id="street" name="street" type="text" required />
                 </div>
-                <div class="register-shipping-details">
-                    <div class="register">
-                        <label for="street">RUA</label>
-                        <input id="street" type="text" required />
-                    </div>
-                    <div class="register">
-                        <label for="neighborhood">BAIRRO</label>
-                        <input id="neighborhood" type="text" required />
-                    </div>
-                    <div class="register">
-                        <label for="number">NÚMERO</label>
-                        <input type="number" id="number" required />
-                    </div>
-                    <div class="register">
+                <div class="register">
+                    <label for="neighborhood">BAIRRO</label>
+                    <input id="neighborhood" name="neighborhood" type="text" required />
+                </div>
+                <div class="row">
+                    <div class="register column-2 right">
                         <label for="zip">CEP</label>
-                        <input type="number" id="zip"  required />
+                        <input type="text" id="zip" name="zip" required pattern="\d{5}-?\d{3}" 
+                            placeholder="00000-000" class="input-small"/>
                     </div>
-                    <div class="register">
-                        <label for="estado">ESTADO</label>
-                        <select id="estado" name="estado" required>
-                            <option value="">Selecione um estado</option>
-                        </select>
-                    </div>
-                    <div class="register">
-                        <label for="complement">COMPLEMENTO</label>
-                        <input id="complement" type="text" required />
+                    <div class="register column-2 left">
+                        <label for="number">NÚMERO</label>
+                        <input type="text" id="number" name="number" required class="input-small"/>
                     </div>
                 </div>
-            </div> 
+                <div class="register">
+                    <label for="complement">COMPLEMENTO</label>
+                    <input id="complement" name="complement" type="text" />
+                </div>
+                <div class="register" >
+                    <label for="estado">ESTADO</label>
+                    <select id="estado" name="estado" required class="input-small">
+                        <option value="">Selecione um estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
         </div>
-
-        <div class="main-form-register data">
+        <div class="data">
             <div>
                 <h1 class="title-form">DADOS DE ACESSO</h1>
             </div>
             <div class="register-access-data">
                 <div class="register">
                     <label for="email">EMAIL</label>
-                    <input id="email" type="email" required autocomplete="email" />
+                    <input class="register-email" id="email" type="email" required autocomplete="email" />
                 </div>
                 <div class="register">
                     <label for="password">SENHA</label>
-                    <input id="password" type="password" required autocomplete="new-password" />
+                    <input id="password" type="password" minlength="6" required autocomplete="new-password" />
                 </div>
                 <div class="register">
                     <label for="confirm_password">CONFIRME SUA SENHA</label>
