@@ -13,16 +13,18 @@
                     <label for="name">NOME COMPLETO</label>
                     <input id="name" name="name" type="text" required />
                 </div>
-                <div class="register">
-                    <label for="cpf_cnpj">CPF | CNPJ</label>
-                    <input id="cpf_cnpj" name="cpf_cnpj" type="text" required 
-                        pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" 
-                         class="input-small" />
-                </div>
-                <div class="register">
-                    <label for="phone">TELEFONE | WHATSAPP</label>
-                    <input id="phone" name="phone" type="tel" required 
-                        pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" class="input-small"/>
+                <div class="row">
+                    <div class="register column-2 right">
+                        <label for="cpf_cnpj">CPF | CNPJ</label>
+                        <input id="cpf_cnpj" name="cpf_cnpj" type="text" required 
+                            pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" 
+                             class="input-small" />
+                    </div>
+                    <div class="register column-2 left">
+                        <label for="phone">TELEFONE | WHATSAPP</label>
+                        <input id="phone" name="phone" type="tel" required 
+                            pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" class="input-small"/>
+                    </div>
                 </div>
                 <div class="register">
                     <label for="dob">DATA DE NASCIMENTO</label>

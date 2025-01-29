@@ -402,7 +402,7 @@ body {
 }
 
 .form-register-personal{
-    padding: 0 4rem 0 0;
+    padding: 0 2rem 0 0;
 }
 
 .register {
@@ -413,7 +413,11 @@ body {
     border-radius: 10px;
     border: 1.5px solid var(--color-gray-4);
     padding: 6px;
-    width: 100%;
+}
+
+.main-form-register input {
+    width: 98%;
+    max-width: 98%;
 }
 
 .input-small {
