@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Reclamacao
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # Aqui você define as funções ou classes que processam as requisições e retornam respostas.
@@ -22,5 +24,15 @@ def register(request):
 def complaint(request):
     return render(request, 'SAC/partials/sac.html',
                   context={'name': 'Sac'})
+
+
+def suggestion(request):
+    return render(request, 'SAC/partials/suggestion.html',
+                  context={'name': 'Sugestão'})
+
+
+def homepage(request):
+    return render(request, 'SAC/partials/homepage.html',
+                  context={'name': 'Reclamações'})
 
 # Adicionar getattr nas reclamações

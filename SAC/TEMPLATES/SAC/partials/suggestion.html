@@ -1,0 +1,25 @@
+{%extends "C:\Users\User\Documents\WEBSITE\base_templates\global\base.html" %}
+
+{% block title %} Sugestão |{% endblock title %}
+
+{% block content %}
+    <form action="" class="suggestion-form">
+        <div class="suggestion">
+            <h1 class="suggestion-h1">
+                FAÇA UMA SUGESTÃO
+            </h1>
+            <div class="suggestion-board">
+                <textarea name="suggestion" id="suggestion" class="suggestion-textarea"></textarea>
+                <p>CARACTERES RESTANTE </p>
+            </div>
+            <div class="suggestion-div-button">
+                <button class="suggestion-button">Salvar</button>
+            </div>
+        </div>
+    </form>
+    <div class="suggestion-picture">
+        <a href="#">
+            <img src="/static/ImagensTemplate/Imagem-sugestao.jpg" alt="Sugestão">
+        </a>
+    </div>
+{% endblock content %}

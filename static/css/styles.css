@@ -421,15 +421,12 @@ body {
 }
 
 .input-small {
-    
     max-width: 16rem;
-
 }
 
 .row {
     width: 100%;
     position: relative ;
-
 }
 
 .row div {
@@ -645,6 +642,141 @@ body {
     cursor: pointer;
 }
 
+/*suggestion.html*/
+
+.suggestion-form {
+    align-self: self-start;
+    margin-left: 0;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.suggestion-form .suggestion{
+    margin: 0 0 2rem 0;
+    align-content: left;
+    display: grid;
+}
+
+.suggestion-h1 {
+    font-size: 4rem;
+    color:#001369; /*AZUL PLAC*/
+    font-family: 'Gotham', sans-serif;
+    font-weight: 900;
+    padding: 0 0 1rem;
+    width: 100%;
+}
+
+.suggestion-board {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 100%;
+}
+
+.suggestion-textarea {
+    border-radius: 10px;
+    width: 55rem;
+    height: 14rem;
+    margin-bottom:1rem;
+    padding: 5px;
+}
+
+.suggestion-board p{
+    margin-left: 75%;
+    color: var(--color-gray-5);
+    font-size: 9px;
+    font-weight: 700;
+    font-family: 'Gotham', sans-serif;
+}
+
+.suggestion-button {
+    border-radius: 10px;
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    margin-left: 80%;
+    cursor: pointer;
+}
+
+.suggestion-picture {
+    margin: 0;
+    text-align: right;
+    max-width: 50%;
+}
+
+.suggestion-picture img{
+    width: 100%;
+}
+
+/*homepage.html*/
+
+.homepage-section {
+    display: grid;
+    flex-wrap: wrap;
+}
+
+.homepage-section-board {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.homepage-section-board h1 {
+    font-family: 'Gotham',sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color:#001369; /*AZUL PLAC*/
+}
+
+.homepage-section-board p {
+    font-family: 'Gotham', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--color-gray-4);
+}
+
+.homepage-list-sac {
+    flex-direction: column;
+    text-align: center;
+}
+.homepage-list-sac p{
+    text-decoration: underline;
+    color: var(--color-gray-4);
+    font-family: "Gotham", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.homepage-information {
+    background: var(--color-gray-1);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 70%;
+    justify-self: center;
+    align-content: center;
+    margin: 1rem;
+}
+
+.homepage-information p, 
+h2 {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 900;
+    color: var(--color-gray-4);
+}
+
+.homepage-information p{
+    font-size: 1.5rem;
+}
+.homepage-information h2{
+    font-size: 2.3rem;
+}
+
 /* Responsividade */
 
 /* Estilos para telas pequenas (celulares) */
@@ -791,6 +923,4 @@ body {
         width: 32rem;
         max-width: 32rem;
     }
-
-    
 }
